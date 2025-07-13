@@ -5,8 +5,9 @@ import os
 def salvarModelo(modelo, historico=None):
     print("\nOlá, sou EWACE! Deseja salvar o modelo criado por: Ayron, Eliel, Carlos e Walter?")
 
-    pasta_destino = r"C:\Users\eliel\Desktop\ChatBot-Teste\Modelos_Treinados"
-    os.makedirs(pasta_destino, exist_ok=True)  # Garante que a pasta existe
+    # Mude para o caminho da sua pasta
+    pasta_destino = r"C:\Users\eliel\Desktop\machine-learn\Modelos_Treinados"
+    os.makedirs(pasta_destino, exist_ok=True)
 
     while True:
         print("\n--- MENU DE SALVAMENTO ---")
@@ -28,11 +29,11 @@ def salvarModelo(modelo, historico=None):
                 print("Para carregar:\nfrom tensorflow.keras.models import load_model\nmodelo = load_model(\"modelo_fertilidade.keras\")")
 
             elif opc == 2:
-                caminho_pesos = os.path.join(pasta_destino, "pesos_fertilidade.h5")
+                caminho_pesos = os.path.join(pasta_destino, "pesos_fertilidade.weights.h5")
                 print("Salvando apenas os pesos...")
                 modelo.save_weights(caminho_pesos)
                 print(f"Pesos salvos em: {caminho_pesos}")
-                print("Para carregar: modelo.load_weights(\"pesos_fertilidade.h5\")")
+                print("Para carregar: modelo.load_weights(\"pesos_fertilidade.weights.h5\")")
 
             elif opc == 3:
                 if historico is None:

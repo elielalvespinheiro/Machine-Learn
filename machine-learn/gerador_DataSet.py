@@ -77,4 +77,4 @@ print("\nInformações do DataFrame:")
 dados_solo.info()
 
 # Salva aqui lol
-dados_solo.to_csv(r"C:\Users\eliel\Desktop\ChatBot-Teste\machine-learn\Solos.csv", sep=";", index=False)
+dados_solo.to_csv(r"C:\Users\eliel\Desktop\machine-learn\csv\Solos.csv", sep=";", index=False)
